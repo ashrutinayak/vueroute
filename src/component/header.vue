@@ -2,11 +2,18 @@
   <div>
     <ul>
       <li>
-        <a href="/">{{ Home }}</a>
-        <a href="/about">{{ About}}</a>
-        <a href="/contact">{{ Contact}}</a>
+        <router-link to="/" exact>{{ Home }}</router-link>
+      </li>
+      <li>
+        <router-link to="/about" exact>{{ About }}</router-link>
+      </li>
+      <li>
+        <router-link to="/contact" exact>{{ Contact }}</router-link>
       </li>
     </ul>
+    <!-- <a href="/">{{ Home }}</a>
+        <a href="/about">{{ About}}</a>
+    <a href="/contact">{{ Contact}}</a>-->
   </div>
 </template>
 
@@ -44,6 +51,10 @@ li {
 
 a {
   color: #42b983;
-  padding: 30px;
+  padding: 10px;
+}
+.router-link-active {
+  background-color: #aaa;
+  color: #222;
 }
 </style>
